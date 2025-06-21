@@ -14,12 +14,33 @@
     --h1-family: "Afacad", sans-serif;
     --h1-size: 28px;
     --h1-weight: bold;
+
+    --h2-family: "Afacad", sans-serif;
+    --h2-size: 20px;
+
+    --h3-family: "Afacad", sans-serif;
+    --h3-size: 16px;
+
+    --p-family: "Afacad", sans-serif;
+    --p-size: 12px;
+}
+body.login{
+    background-color: var(--light-gray);
+}
+body{
+    background-color: var(--white);
 }
 .header{
     background-color: var(--primary-color) !important;
     height: 100px !important;
 }
-footer{
+.footer{
+    background-color: var(--primary-color) !important;
+    width: 100%;
+    height: 207px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     
 }
 .h1{
@@ -32,6 +53,59 @@ footer{
     color: var(--white) !important;
     text-decoration: none !important;
 }
+h2{
+    font-family: var(--h2-family);
+    font-size: var(--h2-size);
+    color: var(--white);
+}
+p{
+    font-family: var(--p-family);
+    font-size: var(--p-size);
+    color: var(--white);
+}
 .nav-link:hover{
     text-decoration: underline !important;
+}
+.line{
+    width: 95%;
+    height: 2px;
+    background-color: var(--white);
+}
+.b1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+.input-footer{
+    width: 136px;
+    height: 28px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    font-family: var(--p-family);
+    font-size: var(--p-size);
+    color: var(--white);
+    padding: 10px;
+}
+.input-footer::placeholder{
+    font-family: var(--p-family);
+    font-size: var(--p-size);
+    color: var(--white);
+}
+.input-footer:focus {
+    outline: none;
+}
+.form-login{
+    background-color: var(--white);
+    height: 100px;
+}
+.form-info{
+    background-color: var(--quarternary-color);   
+    height: 100px;
+}
+.container{
+    margin-top: 100px;
+    display: flex !important; 
 }

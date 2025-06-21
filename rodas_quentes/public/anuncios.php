@@ -1,7 +1,7 @@
 <?php 
-include '../config/connection.php';
-?>
-<?php
+    include '../config/connection.php';
+    include '../includes/header.php';
+
     $stmt = $pdo->query('SELECT * FROM anuncio');
     $anuncios = $stmt->fetchAll();
     foreach ($anuncios as $indice => $ad) { ?>
@@ -23,4 +23,5 @@ include '../config/connection.php';
                 </div>
             </div>
         
-<?php } ?>
+<?php } include '../includes/footer.php'; ?>
+

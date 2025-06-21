@@ -1,5 +1,6 @@
 <?php 
     include '../../config/connection.php';
+    include '../../includes/header.php';
 
     if($_SERVER['REQUEST_METHOD'] == 'GET'){
         $id = isset($_GET['id']) ? $_GET['id'] : exit();
@@ -110,3 +111,5 @@
 
     <button type="submit">Salvar</button>
 </form>
+
+<?php include '../../includes/footer.php'; ?>

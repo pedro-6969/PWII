@@ -1,4 +1,5 @@
-<h1>Login e Senha</h1>
+<?php include '../includes/header.php'; ?>
+<!-- <h1>Login e Senha</h1>
 <form action="login.php" method="POST">
     <label for="email">Email</label>
     <input type="email" name="email" id="email">
@@ -7,8 +8,16 @@
     <input type="password" name="password" id="password">
 
     <button type="submit">Continuar</button>
-</form>
-    
+</form> -->
+<body class="login">
+    <div class="container">
+        <div class="form-login"></div>
+        <div class="form-info"></div>
+    </div>  
+</body>
+
+
+
 <?php 
     $email = isset($_POST['email']) ? $_POST['email'] : exit();
     $password = isset($_POST['password']) ? $_POST['password'] : exit();
@@ -22,4 +31,8 @@
     else{
         echo '<script>alert("Email ou senha incorretos!")</script>';
     }
+
+    include '../includes/footer.php'; 
 ?>
+
+
