@@ -9,21 +9,21 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary header">
+<div class="navbar navbar-expand-lg bg-body-tertiary header">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link h1" aria-current="page" href="../public/index.php">Home</a>
+          <a class="nav-link h1" aria-current="page" href="http://localhost/PWII/rodas_quentes/public/index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link h1" aria-current="page" href="../public/anuncios.php">Anúncios</a>
+          <a class="nav-link h1" aria-current="page" href="http://localhost/PWII/rodas_quentes/public/anuncios.php">Anúncios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link h1" aria-current="page" href="../public/anuncio/create-anuncio.php">Cadastrar</a>
+          <a class="nav-link h1" aria-current="page" href="http://localhost/PWII/rodas_quentes/public/anuncio/create-anuncio.php">Cadastrar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link h1" aria-current="page" href="../public/anuncio/read-anuncio.php">Listar</a>
+          <a class="nav-link h1" aria-current="page" href="http://localhost/PWII/rodas_quentes/public/anuncio/read-anuncio.php">Listar</a>
         </li>
       </ul>
     </div>
@@ -34,4 +34,4 @@
       
     
   </div>
-</nav>
+</div>

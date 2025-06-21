@@ -19,6 +19,9 @@
     background-color: var(--primary-color) !important;
     height: 100px !important;
 }
+footer{
+    
+}
 .h1{
     font-family: var(--h1-family);
     font-size: var(--h1-size);
