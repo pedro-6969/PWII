@@ -14,22 +14,23 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link h1-white" aria-current="page" href="/PWII/rodas_quentes/public/index.php">Home</a>
+            <a class="nav-link h1 white" aria-current="page" href="/PWII/rodas_quentes/public/index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link h1-white" aria-current="page" href="/PWII/rodas_quentes/public/anuncios.php">Anúncios</a>
+            <a class="nav-link h1 white" aria-current="page" href="/PWII/rodas_quentes/public/anuncios.php">Anúncios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link h1-white" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/create-anuncio.php">Cadastrar</a>
+            <a class="nav-link h1 white" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/create-anuncio.php">Cadastrar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link h1-white" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/read-anuncio.php">Listar</a>
+            <a class="nav-link h1 white" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/read-anuncio.php">Listar</a>
           </li>
         </ul>
       </div>
-      <h1 class="h1-white"><img src="/PWII/rodas_quentes/img/placeholder.png" alt="Logo" style="width: 50px; height: auto;">Rodas Quentes</h1>
+      <h1 class="h1 white"><img src="/PWII/rodas_quentes/img/placeholder.png" alt="Logo" style="width: 50px; height: auto;">Rodas Quentes</h1>
       
       
     </div>
   </div>
 </body>
+</html>

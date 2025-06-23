@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <div class="form-login">
                         
                         <div class="d-flex flex-column">
-                            <h1 class="h1-black" style="color: var(--black);">Login e Senha</h1>
+                            <h1 class="h1 black" style="color: var(--black);">Login e Senha</h1>
                             <div class="d-flex gap-3 justify-content-center mt-5">
                                 <img src="../img/placeholder.png" alt="Google" style="width: 32px; height: auto;">
                                 <img src="../img/placeholder.png" alt="Facebook" style="width: 32px; height: auto;">
@@ -40,18 +40,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                         <form action="login.php" method="POST">
                             <div class="input-login">
                                 <img src="../img/placeholder.png" alt="Email" style="width: 20px; heigth:auto;">
-                                <label for="email" class="h2" style="color: var(--black)">Email</label><br>
+                                <label for="email" class="h2 black">Email</label><br>
                                 <input type="email" name="email" id="email" placeholder="Digite o email">
                             </div>
                             
                             <div class="input-login">
                                 <img src="../img/placeholder.png" alt="Senha" style="width: 20px; heigth:auto;">
-                                <label for="password" class="h2" style="color: var(--black)">Senha</label><br>
+                                <label for="password" class="h2 black">Senha</label><br>
                                 <input type="password" name="password" id="password" placeholder="Digite o email">
                             </div>
                             
                             <div class="button-login">
-                                    <button type="submit" class="h2">Continuar</button>
+                                    <button type="submit" class="h2 white">Continuar</button>
                             </div>
                             
                         </form>

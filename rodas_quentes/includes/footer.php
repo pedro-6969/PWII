@@ -24,23 +24,23 @@
                 </div> 
 
                 <div class="col-xl-3 d-flex flex-column align-items-baseline">
-                    <h2>Fale conosco</h2>
-                    <p>rodas_quentes@gmail.com <br>
+                    <h2 class="white">Fale conosco</h2>
+                    <p class="white">rodas_quentes@gmail.com <br>
                     Rua Gonçalo de Carvalho, 69 – Centro – Porto Alegre – RS <br>
                     Rodas Quentes Ltda. <br>
                     +55 51 96240 6969</p>
                 </div>
 
                 <div class="col-xl-3 d-flex flex-column align-items-baseline">
-                    <h2>Inscreva-se</h2>
-                    <p>Inscreva-se para receber <br>
+                    <h2 class="white">Inscreva-se</h2>
+                    <p class="white">Inscreva-se para receber <br>
                     novidades e ofertas!</p>
                     <input type="email" placeholder="Email">
                 </div>
             </div>
             <hr class="border-2 opacity-100" style="border-color: var(--white);">
             <div class="d-flex flex-column align-items-center justify-content-center">
-                <p>© 2025 Rodas Quentes Ltda. Todos os direitos reservados.</p>
+                <p class="white">© 2025 Rodas Quentes Ltda. Todos os direitos reservados.</p>
             </div>
             
         </div>
