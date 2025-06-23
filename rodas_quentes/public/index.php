@@ -48,10 +48,10 @@
             <div class="col-xl-4">
                 <div class="card-texto">
                     <div class="card-body d-flex flex-column align-items-center justify-content-baseline h-100 mt-5">
-                        <h2 class="black">Cadastro de Anúncio de Veículos</h2>
+                        <h2 class="black">Sobre Nós</h2>
                         <p class="black">
-                        O sistema permite cadastrar veículos para venda de forma rápida e eficiente. É possível inserir dados como marca, modelo, ano, preço, quilometragem, fotos e uma descrição detalhada. Com isso, os anúncios ficam organizados e visíveis para os clientes, facilitando a divulgação e a concretização das vendas.
-                        </p>
+                        A Rodas Quentes Ltda. é uma empresa especializada na compra e venda de veículos, oferecendo um sistema prático, rápido e seguro para quem deseja anunciar ou adquirir seu próximo carro. Nosso compromisso é garantir agilidade, transparência e satisfação em cada negociação, conectando clientes às melhores oportunidades do mercado automotivo.                        
+                    </p>
                     </div>
                 </div>
             </div>
