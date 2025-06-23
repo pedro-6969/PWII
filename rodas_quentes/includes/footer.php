@@ -8,18 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="/PWII/rodas_quentes/css/style.css">
 </head>
-
+<body>
         <div class="footer">
-            
         
             <div class="b1">
                 
                 <div class="col-xl-3 d-flex flex-column align-items-baseline">
-                    <h2><img src="/PWII/rodas_quentes/img/placeholder.png" alt="Logo" style="width: 40px; height: 40px;">Rodas Quentes</h2>
+                    <h2><img src="/PWII/rodas_quentes/img/placeholder.png" alt="Logo" style="width: 40px; height: auto;">Rodas Quentes</h2>
                     <div class="d-flex gap-3">
-                        <img src="/PWII/rodas_quentes/img/placeholder.png" alt="Google" style="width: 25px; height: 25px;">
-                        <img src="/PWII/rodas_quentes/img/placeholder.png" alt="Facebook" style="width: 25px; height: 25px;">
-                        <img src="/PWII/rodas_quentes/img/placeholder.png" alt="Linkedin" style="width: 25px; height: 25px;">
+                        <img src="/PWII/rodas_quentes/img/placeholder.png" alt="Google" style="width: 25px; height: auto;">
+                        <img src="/PWII/rodas_quentes/img/placeholder.png" alt="Facebook" style="width: 25px; height: auto;">
+                        <img src="/PWII/rodas_quentes/img/placeholder.png" alt="Linkedin" style="width: 25px; height: auto;">
                     </div>
                     
                 </div> 
@@ -36,7 +35,7 @@
                     <h2>Inscreva-se</h2>
                     <p>Inscreva-se para receber <br>
                     novidades e ofertas!</p>
-                    <input type="email" placeholder="Email" class="input-footer">
+                    <input type="email" placeholder="Email">
                 </div>
             </div>
             <hr class="border-2 opacity-100" style="border-color: var(--white);">

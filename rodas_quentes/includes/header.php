@@ -9,29 +9,27 @@
     <link rel="stylesheet" href="/PWII/rodas_quentes/css/style.css">
 </head>
 <body>
-<div class="navbar navbar-expand-lg bg-body-tertiary header">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link h1" aria-current="page" href="/PWII/rodas_quentes/public/index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h1" aria-current="page" href="/PWII/rodas_quentes/public/anuncios.php">Anúncios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h1" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/create-anuncio.php">Cadastrar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h1" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/read-anuncio.php">Listar</a>
-        </li>
-      </ul>
-    </div>
-    <h1 class="h1">
-      <img src="<?php $base ?>/img/sports car-bro.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      Rodas Quentes
-    </h1>
+  <div class="navbar navbar-expand-lg bg-body-tertiary header">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link h1-white" aria-current="page" href="/PWII/rodas_quentes/public/index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h1-white" aria-current="page" href="/PWII/rodas_quentes/public/anuncios.php">Anúncios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h1-white" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/create-anuncio.php">Cadastrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h1-white" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/read-anuncio.php">Listar</a>
+          </li>
+        </ul>
+      </div>
+      <h1 class="h1-white"><img src="/PWII/rodas_quentes/img/placeholder.png" alt="Logo" style="width: 50px; height: auto;">Rodas Quentes</h1>
       
-    
+      
+    </div>
   </div>
-</div>
+</body>

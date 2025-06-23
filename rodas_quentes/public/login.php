@@ -1,37 +1,84 @@
-<?php include '../includes/header.php'; ?>
-<!-- <h1>Login e Senha</h1>
-<form action="login.php" method="POST">
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email">
+<?php 
+include '../includes/header.php'; 
 
-    <label for="password">Senha</label>
-    <input type="password" name="password" id="password">
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $email = isset($_POST['email']) ? $_POST['email'] : exit();
+    $password = isset($_POST['password']) ? $_POST['password'] : exit();
+    
+    $email_adm = 'rodas_quentes@gmail.com';
+    $password_adm = '123123';
+    
+    if($email == $email_adm && $password == $password_adm){
+        header('Location: index.php');
+        exit();
+    }
+    else{
+        echo '<script>alert("Email ou senha incorretos!")</script>';
+    }
+}
 
-    <button type="submit">Continuar</button>
-</form> -->
+?>
 <body class="login">
-    <div class="container">
-        <div class="form-login"></div>
-        <div class="form-info"></div>
+    <div class="container-fluid">
+        <div class="row justify-content-center margin-top-bottom">
+            <div class="col-xl-8">
+                <div class="row cont-login">
+                    <div class="form-login">
+                        
+                        <div class="d-flex flex-column">
+                            <h1 class="h1-black" style="color: var(--black);">Login e Senha</h1>
+                            <div class="d-flex gap-3 justify-content-center mt-5">
+                                <img src="../img/placeholder.png" alt="Google" style="width: 32px; height: auto;">
+                                <img src="../img/placeholder.png" alt="Facebook" style="width: 32px; height: auto;">
+                                <img src="../img/placeholder.png" alt="Linkedin" style="width: 32px; height: auto;">
+                            </div>
+                            
+                        </div>
+                    
+                        <hr style="border-color: var(--light-gray); width: 400px; border: solid 1px;">
+                        
+                        <form action="login.php" method="POST">
+                            <div class="input-login">
+                                <img src="../img/placeholder.png" alt="Email" style="width: 20px; heigth:auto;">
+                                <label for="email" class="h2" style="color: var(--black)">Email</label><br>
+                                <input type="email" name="email" id="email" placeholder="Digite o email">
+                            </div>
+                            
+                            <div class="input-login">
+                                <img src="../img/placeholder.png" alt="Senha" style="width: 20px; heigth:auto;">
+                                <label for="password" class="h2" style="color: var(--black)">Senha</label><br>
+                                <input type="password" name="password" id="password" placeholder="Digite o email">
+                            </div>
+                            
+                            <div class="button-login">
+                                    <button type="submit" class="h2">Continuar</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div class="form-info">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="../img/carro-login.svg" alt="carro-login">
+                            <div class="d-flex flex-column mt-3">
+                                <h2>Nosso sistema permite:</h2>
+                                <li class="h3">Cadastro: Registra dados de veículos e clientes</li>
+                                <li class="h3">Vendas: Controla negociações, contratos e pagamentos.</li>
+                            </div>
+                            
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>  
 </body>
 
 
 
 <?php 
-    $email = isset($_POST['email']) ? $_POST['email'] : exit();
-    $password = isset($_POST['password']) ? $_POST['password'] : exit();
-    
-    $email_adm = 'rodas_quentes@gmail.com';
-    $password_adm = '123123';
-
-    if($email == $email_adm && $password == $password_adm){
-        header('Location: index.php');
-    }
-    else{
-        echo '<script>alert("Email ou senha incorretos!")</script>';
-    }
-
     include '../includes/footer.php'; 
 ?>
 
