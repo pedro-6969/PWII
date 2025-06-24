@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 ?>
-<div class="d-flex">
+<div class="d-flex cu">
         <div class="info-create d-flex justify-content-center">
             <div>
                 <div class="d-flex justify-content-center">
