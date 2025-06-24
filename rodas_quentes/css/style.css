@@ -13,27 +13,29 @@
     --shadow: rgba(25, 25, 25, 0.15);
 
     --h1-family: "Afacad", sans-serif;
-    --h1-size: 28px;
+    --h1-size: 30px;
     --h1-weight: bold;
 
     --h2-family: "Afacad", sans-serif;
-    --h2-size: 20px;
+    --h2-size: 22px;
 
     --h3-family: "Afacad", sans-serif;
-    --h3-size: 16px;
+    --h3-size: 18px;
 
     --p-family: "Afacad", sans-serif;
-    --p-size: 12px;
+    --p-size: 16px;
 }
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body.login{
     background-color: var(--light-gray);
 }
 body{
     background-color: var(--white);
+    height: 100%
 }
 .header{
     background-color: var(--primary-color) !important;
@@ -64,13 +66,19 @@ h2, .h2{
 .h3{
     font-family: var(--h3-family);
     font-size: var(--h3-size);
-    color: var(--quinary-color);
 }
 .white{
     color: var(--white);
 }
 .black{
     color: var(--black);
+}
+.quinary-color{
+    color: var(--quinary-color);
+}
+.black:hover{
+    color: var(--black) !important;
+    text-decoration: none !important;
 }
 p{
     font-family: var(--p-family);
@@ -145,23 +153,27 @@ p{
     height: auto;
     margin: 10px;
 }
-.input-login input{
+.input-text{
     width: 100%;
     height: 39px;
     border-radius: 10px;
     border: none;
+    font-family: var(--h2-family);
+    font-size: var(--h2-size);
+    color: var(--black);
     background-color: var(--light-gray);
 }
-.input-login input::placeholder{
+.input-text::placeholder{
     font-family: var(--h2-family);
     font-size: var(--h2-size);
     color: var(--gray);
     padding-left: 5px;
 }
-.input-login input:focus {
+.input-text:focus {
     outline: none;
     padding-left: 5px;
 }
+
 .button-login{
     display: flex;
     justify-content: center;
@@ -169,6 +181,20 @@ p{
     height: auto;
 }
 .button-login button{
+    width: 168px;
+    height: 39px;
+    background-color: var(--terciary-color);
+    border: none;
+    border-radius: 10px;
+    margin-top: 36px;
+}
+.button-create{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.button-create button{
     width: 168px;
     height: 39px;
     background-color: var(--terciary-color);
@@ -186,4 +212,47 @@ p{
     height: 240px !important; 
     border: none;
     border-radius: 10px;
+}
+.read-anuncio{
+    background-color: var(--quarternary-color);
+    height: 269px;
+}
+.cont-anuncio{
+    min-height: 350px;
+    height: 350px;
+    border-radius: 15px;
+}
+.ligth-gray-anuncio{
+    background-color: var(--light-gray);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.blue-anuncio{
+    background-color: var(--quarternary-color);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.anuncios{
+    min-height: 100vh;
+}
+
+.info-create{
+    background-color: var(--quarternary-color);
+    width: 50%;
+    height: auto;
+}
+.form-create{
+    width: 50%;
+    height: auto;
 }

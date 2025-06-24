@@ -37,54 +37,79 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 ?>
+<div class="d-flex">
+        <div class="info-create d-flex justify-content-center">
+            <div>
+                <div class="d-flex justify-content-center">
+                    <img src="../../img/carro-login.svg" alt="carro-login" style="width: 800px; heigth: auto;">
+                </div>
+                <h1 class="h1 white">Faça o cadastro do anúncio de seu veículo aqui!</h1>
+                <li class="h2 quinary-color">Preencha todas as informações solicitadas.</li>
+                <li class="h2 quinary-color">Seu anúncio será exibido à todos os usuários do sistema.</li> 
+                <li class="h2 quinary-color">Você poderá editar ou excluir seu anúncio quando quiser.</li> 
+                <li class="h2 quinary-color">Você poderá cadastrar outros veículos se quiser.</li> 
+            </div>
+        </div>
+        <div class="form-create d-flex justify-content-center">
+            <form action="create-anuncio.php" method="POST" enctype="multipart/form-data">
+                <h1 class="h1 black mt-3">Cadastro de anúncio de veículos</h1>
+                <!--1-->
+                <label for="titulo_anuncio" class="h2 black mt-1">Título do anúncio</label> 
+                <input type="text" name="titulo_anuncio" id="titulo_anuncio" class="input-text">
+                <br>
+                <!--2-->
+                <label for="descricao_anuncio" class="h2 black mt-1">Descrição do anúncio</label>
+                <input type="text" name="descricao_anuncio" id="descricao_anuncio" class="input-text">
+                <br>
+                <!--3-->
+                <label for="data_publicacao" class="h2 black mt-1">Data da publicação</label>
+                <input type="text" name="data_publicacao" id="data_publicacao" class="input-text">
+                <br>
+                <!--4-->
+                <label for="marca_veiculo" class="h2 black mt-1">Marca do veículo</label>
+                <input type="text" name="marca_veiculo" id="marca_veiculo" class="input-text">
+                <br>
+                <!--5-->
+                <label for="modelo_veiculo" class="h2 black mt-1">Modelo do veículo</label>
+                <input type="text" name="modelo_veiculo" id="modelo_veiculo" class="input-text">
+                <br>
+                <!--6-->
+                <label for="ano_veiculo" class="h2 black mt-1">Ano do veículo</label>
+                <input type="text" name="ano_veiculo" id="ano_veiculo" class="input-text">
+                <br>
+                <!--7-->
+                <label for="cor_veiculo" class="h2 black mt-1">Cor do veículo</label>
+                <input type="text" name="cor_veiculo" id="cor_veiculo" class="input-text">
+                <br>
+                <!--8-->
+                <label for="placa_veiculo" class="h2 black mt-1">Placa do veículo</label>
+                <input type="text" name="placa_veiculo" id="placa_veiculo" class="input-text">
+                <br>
+                <!--9-->
+                <label for="nome_proprietario" class="h2 black mt-1">Nome do proprietário</label>
+                <input type="text" name="nome_proprietario" id="nome_proprietario" class="input-text">
+                <br>
+                <!--10-->
+                <label for="telefone_proprietario" class="h2 black mt-1">Telefone do proprietário</label>
+                <input type="text" name="telefone_proprietario" id="telefone_proprietario" class="input-text">
+                <br>
+                <!-- 11 -->
+            
+                <label for="formFile" class="form-label">Escolher Arquivo</label>
+                <input class="form-control" type="file" id="formFile">
+                
+                <!-- <label for="imagem_veiculo" class="h2 black mt-2">Imagem do veículo</label>
+                <input type="file" name="imagem_veiculo" id="imagem_veiculo" required> -->
+                <br>
+                <div class="button-create mb-3">
+                    <button type="submit" class="h2 white">Cadastrar</button>
+                </div>
+                
+            </form>
+        </div>
+        
+    </div>
+</div>
 
-<form action="create-anuncio.php" method="POST" enctype="multipart/form-data">
-    <!--1-->
-    <label for="titulo_anuncio">Título do anúncio</label> 
-    <input type="text" name="titulo_anuncio" id="titulo_anuncio">
-    <br>
-    <!--2-->
-    <label for="descricao_anuncio">Descrição do anúncio</label>
-    <input type="text" name="descricao_anuncio" id="descricao_anuncio">
-    <br>
-    <!--3-->
-    <label for="data_publicacao">Data da publicação</label>
-    <input type="text" name="data_publicacao" id="data_publicacao">
-    <br>
-    <!--4-->
-    <label for="marca_veiculo">Marca do veículo</label>
-    <input type="text" name="marca_veiculo" id="marca_veiculo">
-    <br>
-    <!--5-->
-    <label for="modelo_veiculo">Modelo do veículo</label>
-    <input type="text" name="modelo_veiculo" id="modelo_veiculo">
-    <br>
-    <!--6-->
-    <label for="ano_veiculo">Ano do veículo</label>
-    <input type="text" name="ano_veiculo" id="ano_veiculo">
-    <br>
-    <!--7-->
-    <label for="cor_veiculo">Cor do veículo</label>
-    <input type="text" name="cor_veiculo" id="cor_veiculo">
-    <br>
-    <!--8-->
-    <label for="placa_veiculo">Placa do veículo</label>
-    <input type="text" name="placa_veiculo" id="placa_veiculo">
-    <br>
-    <!--9-->
-    <label for="nome_proprietario">Nome do proprietário</label>
-    <input type="text" name="nome_proprietario" id="nome_proprietario">
-    <br>
-    <!--10-->
-    <label for="telefone_proprietario">Telefone do proprietário</label>
-    <input type="text" name="telefone_proprietario" id="telefone_proprietario">
-    <br>
-    <!-- 11 -->
-    <label for="imagem_veiculo">Imagem do veículo</label>
-    <input type="file" name="imagem_veiculo" id="imagem_veiculo" required>
-    <br>
-    
-    <button type="submit">Cadastrar</button>
-</form>
 
 <?php include '../../includes/footer.php'; ?>

@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <div class="form-login">
                         
                         <div class="d-flex flex-column">
-                            <h1 class="h1 black" style="color: var(--black);">Login e Senha</h1>
+                            <h1 class="h1 black">Login e Senha</h1>
                             <div class="d-flex gap-3 justify-content-center mt-5">
                                 <img src="../img/placeholder.png" alt="Google" style="width: 32px; height: auto;">
                                 <img src="../img/placeholder.png" alt="Facebook" style="width: 32px; height: auto;">
@@ -61,13 +61,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                             <img src="../img/carro-login.svg" alt="carro-login">
                             <div class="d-flex flex-column mt-3">
                                 <h2>Nosso sistema permite:</h2>
-                                <li class="h3">Cadastro: Registra dados de veículos e clientes</li>
-                                <li class="h3">Vendas: Controla negociações, contratos e pagamentos.</li>
+                                <li class="h3 quinary-color">Cadastro: Registra dados de veículos e clientes</li>
+                                <li class="h3 quinary-color">Vendas: Controla negociações, contratos e pagamentos.</li>
                             </div>
                             
-                            <ul>
-                                
-                            </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -75,8 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         </div>
     </div>  
 </body>
-
-
 
 <?php 
     include '../includes/footer.php'; 
