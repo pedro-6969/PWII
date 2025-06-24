@@ -37,11 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 ?>
-<div class="d-flex cu">
+<div class="d-flex">
         <div class="info-create d-flex justify-content-center">
             <div>
                 <div class="d-flex justify-content-center">
-                    <img src="../../img/carro-login.svg" alt="carro-login" style="width: 800px; heigth: auto;">
+                    <img src="../../img/carro-login.svg" alt="carro-login" class="imagem-create">
                 </div>
                 <h1 class="h1 white">Faça o cadastro do anúncio de seu veículo aqui!</h1>
                 <li class="h2 quinary-color">Preencha todas as informações solicitadas.</li>
@@ -95,15 +95,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <br>
                 <!-- 11 -->
             
-                <label for="formFile" class="form-label">Escolher Arquivo</label>
-                <input class="form-control" type="file" id="formFile">
+                <label class="h2 black mt-1">Imagem do veículo</label>
+                <label for="imagem_veiculo" class="h2 black mt-1 label-file">Escolher arquivo</label>
+                <input type="file" name="imagem_veiculo" id="imagem_veiculo" class="form-control">
                 
+
                 <!-- <label for="imagem_veiculo" class="h2 black mt-2">Imagem do veículo</label>
                 <input type="file" name="imagem_veiculo" id="imagem_veiculo" required> -->
                 <br>
                 <div class="button-create mb-3">
                     <button type="submit" class="h2 white">Cadastrar</button>
                 </div>
+                <script>
+    const inputFile = document.getElementById('imagem_veiculo');
+    const fileName = document.getElementById('file-name');
+
+    inputFile.addEventListener('change', function(){
+        if(this.files.length > 0){
+            fileName.textContent = this.files[0].name;
+        } else {
+            fileName.textContent = "Nenhum arquivo selecionado";
+        }
+    });
+</script>
+
                 
             </form>
         </div>

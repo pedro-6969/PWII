@@ -157,23 +157,24 @@ p{
 }
 .input-text{
     width: 100%;
-    height: 39px;
+    height: auto;
     border-radius: 10px;
     border: none;
     font-family: var(--h2-family);
     font-size: var(--h2-size);
     color: var(--black);
     background-color: var(--light-gray);
+    padding: 4px;
 }
 .input-text::placeholder{
     font-family: var(--h2-family);
     font-size: var(--h2-size);
     color: var(--gray);
-    padding-left: 5px;
+    padding: 4px;
 }
 .input-text:focus {
     outline: none;
-    padding-left: 5px;
+    padding: 4px;
 }
 
 .button-login{
@@ -184,7 +185,7 @@ p{
 }
 .button-login button{
     width: 168px;
-    height: 39px;
+    height: auto;
     background-color: var(--terciary-color);
     border: none;
     border-radius: 10px;
@@ -257,4 +258,53 @@ p{
 .form-create{
     width: 50%;
     height: auto;
+}
+.form-control{
+    background-color: var(--light-gray);
+    font-family: var(--h2-family) !important;
+    font-size: var(--h2-size) !important;
+    color: var(--black) !important;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 4px;
+    display: none;
+}
+.form-control:focus{
+    border: none;
+}
+.form-control:active{
+    border: none;
+    color: var(--terciary-color) !important;
+}
+.label-file{
+    background-color: var(--terciary-color);
+    color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--h2-family);
+    font-size: var(--h2-size);
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+    padding: 4px;
+}
+#file-name {
+    margin-left: 15px;
+    font-family: var(--h2-family);
+    font-size: var(--h2-size);
+    color: var(--black);
+}
+.image-create{
+    width: 800px;
+    height: auto;
+}
+@media(max-width: 1200px) {
+    .image-create{
+        width: 800px;
+        height: auto;
+    }
 }
