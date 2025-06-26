@@ -41,16 +41,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                             <div class="input-login">
                                 <img src="../img/placeholder.png" alt="Email" style="width: 20px; heigth:auto;">
                                 <label for="email" class="h2 black">Email</label><br>
-                                <input type="email" name="email" id="email" placeholder="Digite o email">
+                                <input type="email" name="email" id="email" placeholder="Digite o email" class="input-text">
                             </div>
                             
                             <div class="input-login">
                                 <img src="../img/placeholder.png" alt="Senha" style="width: 20px; heigth:auto;">
                                 <label for="password" class="h2 black">Senha</label><br>
-                                <input type="password" name="password" id="password" placeholder="Digite o email">
+                                <input type="password" name="password" id="password" placeholder="Digite o email" class="input-text">
                             </div>
                             
-                            <div class="button-login">
+                            <div class="button-create mb-3">
                                     <button type="submit" class="h2 white">Continuar</button>
                             </div>
                             

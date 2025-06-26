@@ -96,9 +96,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <!-- 11 -->
             
                 <label class="h2 black mt-1">Imagem do veículo</label>
-                <label for="imagem_veiculo" class="h2 black mt-1 label-file">Escolher arquivo</label>
+                <label for="imagem_veiculo" class="h2 black mt-1 label-file w-100">Escolher arquivo</label>
                 <input type="file" name="imagem_veiculo" id="imagem_veiculo" class="form-control">
-                
 
                 <!-- <label for="imagem_veiculo" class="h2 black mt-2">Imagem do veículo</label>
                 <input type="file" name="imagem_veiculo" id="imagem_veiculo" required> -->
@@ -106,19 +105,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="button-create mb-3">
                     <button type="submit" class="h2 white">Cadastrar</button>
                 </div>
-                <script>
-    const inputFile = document.getElementById('imagem_veiculo');
-    const fileName = document.getElementById('file-name');
-
-    inputFile.addEventListener('change', function(){
-        if(this.files.length > 0){
-            fileName.textContent = this.files[0].name;
-        } else {
-            fileName.textContent = "Nenhum arquivo selecionado";
-        }
-    });
-</script>
-
                 
             </form>
         </div>
