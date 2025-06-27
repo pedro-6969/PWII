@@ -12,12 +12,12 @@
                 <div class="col-xl-6 d-flex justify-content-center">
                     <div class="d-flex flex-column m-5">
                         <div class="d-flex m-1">
-                            <a href="delete-anuncio.php?id=<?php echo $ad['id'] ?>"><img src="../../img/placeholder.png" alt="Delete" style="width: 20px; heigth: auto;"></a>
-                            <a href="update-anuncio.php?id=<?php echo $ad['id'] ?>"><img src="../../img/placeholder.png" alt="Update" style="width: 20px; heigth: auto;"></a>
+                            <a href="delete-anuncio.php?id=<?php echo $ad['id'] ?>"><img src="../../img/delete.png" alt="Delete" style="width: 30px; heigth: auto; margin-right: 5px;"></a>
+                            <a href="update-anuncio.php?id=<?php echo $ad['id'] ?>"><img src="../../img/update.png" alt="Update" style="width: 30px; heigth: auto; margin-left: 5px;"></a>
                         </div>
-                        <div class="d-flex cont-anuncio position-relative">
+                        <div class="d-flex cont-anuncio">
                             <div class="ligth-gray-anuncio">
-                                <img src="../../img/<?php echo $ad['imagem_veiculo']; ?>" alt="<?php echo $ad['titulo_anuncio']; ?>" style="width: 80%; heigth: auto; border-radius: 5px">
+                                <div class="img-read" style="background-image: url(../../img/<?php echo $ad['imagem_veiculo']; ?>); width: 330px; height: 330px; border-radius: 5px;"></div>
                             </div>
                             <div class="blue-anuncio">
                                 <div class="read-anuncio-info m-3">

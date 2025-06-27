@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="info-create d-flex justify-content-center">
             <div>
                 <div class="d-flex justify-content-center">
-                    <img src="../../img/carro-login.svg" alt="carro-login" class="imagem-create">
+                    <img src="../../img/carro-form.svg" alt="carro-form" class="imagem-create">
                 </div>
                 <h1 class="h1 white">Faça o cadastro do anúncio de seu veículo aqui!</h1>
                 <li class="h2 quinary-color">Preencha todas as informações solicitadas.</li>
@@ -55,43 +55,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <h1 class="h1 black mt-3">Cadastro de anúncio de veículos</h1>
                 <!--1-->
                 <label for="titulo_anuncio" class="h2 black mt-1">Título do anúncio</label> 
-                <input type="text" name="titulo_anuncio" id="titulo_anuncio" class="input-text">
+                <input type="text" name="titulo_anuncio" id="titulo_anuncio" class="input-text" placeholder="Título">
                 <br>
                 <!--2-->
                 <label for="descricao_anuncio" class="h2 black mt-1">Descrição do anúncio</label>
-                <input type="text" name="descricao_anuncio" id="descricao_anuncio" class="input-text">
+                <input type="text" name="descricao_anuncio" id="descricao_anuncio" class="input-text" placeholder="Descrição">
                 <br>
                 <!--3-->
                 <label for="data_publicacao" class="h2 black mt-1">Data da publicação</label>
-                <input type="text" name="data_publicacao" id="data_publicacao" class="input-text">
+                <input type="text" name="data_publicacao" id="data_publicacao" class="input-text" placeholder="Data">
                 <br>
                 <!--4-->
                 <label for="marca_veiculo" class="h2 black mt-1">Marca do veículo</label>
-                <input type="text" name="marca_veiculo" id="marca_veiculo" class="input-text">
+                <input type="text" name="marca_veiculo" id="marca_veiculo" class="input-text" placeholder="Marca">
                 <br>
                 <!--5-->
                 <label for="modelo_veiculo" class="h2 black mt-1">Modelo do veículo</label>
-                <input type="text" name="modelo_veiculo" id="modelo_veiculo" class="input-text">
+                <input type="text" name="modelo_veiculo" id="modelo_veiculo" class="input-text" placeholder="Modelo">
                 <br>
                 <!--6-->
                 <label for="ano_veiculo" class="h2 black mt-1">Ano do veículo</label>
-                <input type="text" name="ano_veiculo" id="ano_veiculo" class="input-text">
+                <input type="text" name="ano_veiculo" id="ano_veiculo" class="input-text" placeholder="Ano">
                 <br>
                 <!--7-->
                 <label for="cor_veiculo" class="h2 black mt-1">Cor do veículo</label>
-                <input type="text" name="cor_veiculo" id="cor_veiculo" class="input-text">
+                <input type="text" name="cor_veiculo" id="cor_veiculo" class="input-text" placeholder="Cor">
                 <br>
                 <!--8-->
                 <label for="placa_veiculo" class="h2 black mt-1">Placa do veículo</label>
-                <input type="text" name="placa_veiculo" id="placa_veiculo" class="input-text">
+                <input type="text" name="placa_veiculo" id="placa_veiculo" class="input-text" placeholder="Placa">
                 <br>
                 <!--9-->
                 <label for="nome_proprietario" class="h2 black mt-1">Nome do proprietário</label>
-                <input type="text" name="nome_proprietario" id="nome_proprietario" class="input-text">
+                <input type="text" name="nome_proprietario" id="nome_proprietario" class="input-text" placeholder="Nome">
                 <br>
                 <!--10-->
                 <label for="telefone_proprietario" class="h2 black mt-1">Telefone do proprietário</label>
-                <input type="text" name="telefone_proprietario" id="telefone_proprietario" class="input-text">
+                <input type="text" name="telefone_proprietario" id="telefone_proprietario" class="input-text" placeholder="Telefone">
                 <br>
                 <!-- 11 -->
             

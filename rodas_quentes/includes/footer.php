@@ -14,11 +14,11 @@
             <div class="b1">
                 
                 <div class="col-xl-3 d-flex flex-column align-items-baseline">
-                    <h2><img src="/PWII/rodas_quentes/img/placeholder.png" alt="Logo" style="width: 40px; height: auto;">Rodas Quentes</h2>
+                    <h2><img src="/PWII/rodas_quentes/img/logo-rodas-quentes.png" alt="Logo" style="width: 40px; height: auto;">Rodas Quentes</h2>
                     <div class="d-flex gap-3">
-                        <img src="/PWII/rodas_quentes/img/placeholder.png" alt="Google" style="width: 25px; height: auto;">
-                        <img src="/PWII/rodas_quentes/img/placeholder.png" alt="Facebook" style="width: 25px; height: auto;">
-                        <img src="/PWII/rodas_quentes/img/placeholder.png" alt="Linkedin" style="width: 25px; height: auto;">
+                        <img src="/PWII/rodas_quentes/img/google-footer.png" alt="Google" style="width: 25px; height: auto;">
+                        <img src="/PWII/rodas_quentes/img/facebook-footer.png" alt="Facebook" style="width: 25px; height: auto;">
+                        <img src="/PWII/rodas_quentes/img/linkedin-footer.png" alt="Linkedin" style="width: 25px; height: auto;">
                     </div>
                     
                 </div> 

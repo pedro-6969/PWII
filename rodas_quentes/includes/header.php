@@ -23,11 +23,11 @@
             <a class="nav-link h1 white" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/create-anuncio.php">Cadastrar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link h1 white" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/read-anuncio.php">Listar</a>
+            <a class="nav-link h1 white" aria-current="page" href="/PWII/rodas_quentes/public/anuncio/read-anuncio.php">Read</a>
           </li>
         </ul>
       </div>
-      <h1 class="h1 white"><img src="/PWII/rodas_quentes/img/placeholder.png" alt="Logo" style="width: 50px; height: auto;">Rodas Quentes</h1>
+      <h1 class="h1 white"><img src="/PWII/rodas_quentes/img/logo-rodas-quentes.png" alt="Logo" style="width: 50px; height: auto;">Rodas Quentes</h1>
       
       
     </div>

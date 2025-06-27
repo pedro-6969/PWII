@@ -66,7 +66,7 @@
         <div class="info-create d-flex justify-content-center">
             <div>
                 <div class="d-flex justify-content-center">
-                    <img src="../../img/carro-login.svg" alt="carro-login" class="imagem-create">
+                    <img src="../../img/carro-form.svg" alt="carro-login" class="imagem-create">
                 </div>
                 <h1 class="h1 white">Faça o cadastro do anúncio de seu veículo aqui!</h1>
                 <li class="h2 quinary-color">Preencha todas as informações solicitadas.</li>

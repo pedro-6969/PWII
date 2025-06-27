@@ -12,8 +12,8 @@
                 <div class="col-xl-6 d-flex justify-content-center">
                     <div class="d-flex cont-anuncio m-5">
                         <div class="ligth-gray-anuncio">
+                            <img src="../img/<?php echo $ad['imagem_veiculo']; ?>" alt="">
                             
-                            <img src="../img/<?php echo $ad['imagem_veiculo']; ?>" alt="<?php echo $ad['titulo_anuncio']; ?>" style="width: 80%; heigth: auto; border-radius: 5px">
                         </div>
                         <div class="blue-anuncio">
                             <div class="read-anuncio-info m-3">

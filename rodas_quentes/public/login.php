@@ -28,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                         <div class="d-flex flex-column">
                             <h1 class="h1 black">Login e Senha</h1>
                             <div class="d-flex gap-3 justify-content-center mt-5">
-                                <img src="../img/placeholder.png" alt="Google" style="width: 32px; height: auto;">
-                                <img src="../img/placeholder.png" alt="Facebook" style="width: 32px; height: auto;">
-                                <img src="../img/placeholder.png" alt="Linkedin" style="width: 32px; height: auto;">
+                                <img src="../img/google-login.png" alt="Google" style="width: 32px; height: auto;">
+                                <img src="../img/facebook-login.png" alt="Facebook" style="width: 32px; height: auto;">
+                                <img src="../img/linkedin-login.png" alt="Linkedin" style="width: 32px; height: auto;">
                             </div>
                             
                         </div>
