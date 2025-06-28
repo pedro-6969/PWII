@@ -91,11 +91,7 @@ p{
 .nav-link:hover{
     text-decoration: underline !important;
 }
-.line{
-    width: 95%;
-    height: 2px;
-    background-color: var(--white);
-}
+
 .b1{
     width: 100%;
     height: auto;
@@ -244,7 +240,7 @@ p{
 }
 .blue-anuncio{
     background-color: var(--quarternary-color);
-    width: 50%;
+    width: 350px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -254,6 +250,7 @@ p{
 }
 .anuncios{
     min-height: 100vh;
+    min-width: 100vh;
 }
 
 .info-create{
@@ -327,7 +324,6 @@ p{
     background-size: cover;        
     background-position: center;   
     background-repeat: no-repeat;  
-    /* width: 100%; */
     width: 330px; 
     height: 330px; 
     border-radius: 5px;
@@ -338,3 +334,8 @@ p{
         height: auto;
     }
 }
+.icon:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
