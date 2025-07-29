@@ -28,7 +28,7 @@
   </body>
 </html>
 <?php 
-    if(isset($_POST['name'])){
+    if(!isset($_POST['name'])){
         echo 'Preencha seu nome completo';
     }
     if(empty($_POST['name'])){
