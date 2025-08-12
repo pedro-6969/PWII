@@ -1,5 +1,5 @@
 <?php
-    class Editora {
+    class Ebook {
         private $id;
         private $titulo;
         private $descricao;

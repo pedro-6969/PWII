@@ -3,7 +3,7 @@
     //Configuração da conexão com BD:
 
     $host = 'localhost';
-    $database = 'escola';
+    $database = 'ebooks';
     $user = 'root';
     $password = '';
 

@@ -1,5 +1,5 @@
 <?php
-    class Editora {
+    class Avaliacao {
         private $id;
         private $nota;
         private $comentario;
