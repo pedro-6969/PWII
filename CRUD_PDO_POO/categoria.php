@@ -6,7 +6,15 @@
         public function __construct($nome){
             $this->nome = $nome;
         }
-        public function inserir(){}
+        public function inserir(){
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $nome = $_POST['nome'];
+            
+                $stmt = $pdo->prepare("INSERT INTO categoria (nome) VALUES (:nome)");
+                $stmt->bindParam(':nome', $nome);
+                $stmt->execute();
+            }
+        }
 
         public function buscar($id){}
 

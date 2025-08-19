@@ -1,188 +1,118 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Aug 12, 2025 at 09:25 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Criar o banco de dados
+CREATE DATABASE IF NOT EXISTS sistema_ebooks;
+USE sistema_ebooks;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+-- Tabela Autor
+CREATE TABLE IF NOT EXISTS autor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    biografia TEXT,
+    foto VARCHAR(255),
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
+-- Tabela Editora
+CREATE TABLE IF NOT EXISTS editora (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    site VARCHAR(255),
+    email VARCHAR(255),
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+-- Tabela Categoria
+CREATE TABLE IF NOT EXISTS categoria (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL UNIQUE,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
---
--- Database: `ebooks`
---
+-- Tabela Usuario
+CREATE TABLE IF NOT EXISTS usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    tipo ENUM('admin', 'comum') DEFAULT 'comum',
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
--- --------------------------------------------------------
+-- Tabela Ebook
+CREATE TABLE IF NOT EXISTS ebook (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    isbn VARCHAR(20) NOT NULL UNIQUE,
+    data_publicacao DATE,
+    preco DECIMAL(10, 2) NOT NULL,
+    idioma VARCHAR(50),
+    foto VARCHAR(255),
+    editora_id INT,
+    autor_id INT,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (editora_id) REFERENCES editora(id) ON DELETE SET NULL,
+    FOREIGN KEY (autor_id) REFERENCES autor(id) ON DELETE SET NULL
+);
 
---
--- Table structure for table `autor`
---
+-- Tabela de relacionamento Ebook_Categoria (N para N)
+CREATE TABLE IF NOT EXISTS ebook_categoria (
+    ebook_id INT,
+    categoria_id INT,
+    data_associacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (ebook_id, categoria_id),
+    FOREIGN KEY (ebook_id) REFERENCES ebook(id) ON DELETE CASCADE,
+    FOREIGN KEY (categoria_id) REFERENCES categoria(id) ON DELETE CASCADE
+);
 
-CREATE TABLE `autor` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(50) NOT NULL,
-  `biografia` varchar(255) NOT NULL,
-  `foto` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- Tabela Avaliacao
+CREATE TABLE IF NOT EXISTS avaliacao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nota INT CHECK (nota BETWEEN 1 AND 5),
+    comentario TEXT,
+    data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    usuario_id INT,
+    ebook_id INT,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuario(id) ON DELETE CASCADE,
+    FOREIGN KEY (ebook_id) REFERENCES ebook(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_avaliacao (usuario_id, ebook_id)
+);
 
--- --------------------------------------------------------
+-- Inserir alguns dados de exemplo
+INSERT INTO autor (nome, biografia, foto) VALUES
+('Machado de Assis', 'Escritor brasileiro, considerado o maior nome da literatura nacional.', 'machado.jpg'),
+('Clarice Lispector', 'Escritora e jornalista brasileira nascida na Ucrânia.', 'clarice.jpg');
 
---
--- Table structure for table `avaliacao`
---
+INSERT INTO editora (nome, site, email) VALUES
+('Companhia das Letras', 'www.companhiadasletras.com.br', 'contato@companhiadasletras.com.br'),
+('Editora Rocco', 'www.rocco.com.br', 'contato@rocco.com.br');
 
-CREATE TABLE `avaliacao` (
-  `id` int(11) NOT NULL,
-  `nota` int(11) NOT NULL,
-  `comentario` varchar(255) NOT NULL,
-  `data` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO categoria (nome) VALUES
+('Romance'),
+('Ficção'),
+('Contos'),
+('Literatura Brasileira');
 
--- --------------------------------------------------------
+INSERT INTO usuario (nome, email, senha, tipo) VALUES
+('Admin', 'admin@email.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin'),
+('João Silva', 'joao@email.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'comum');
 
---
--- Table structure for table `categoria`
---
+INSERT INTO ebook (titulo, descricao, isbn, data_publicacao, preco, idioma, foto, editora_id, autor_id) VALUES
+('Dom Casmurro', 'Romance clássico da literatura brasileira', '978853590', '1899-01-01', 29.90, 'Português', 'dom_casmurro.jpg', 1, 1),
+('A Hora da Estrela', 'Último romance publicado por Clarice Lispector', '978853250', '1977-01-01', 34.90, 'Português', 'hora_estrela.jpg', 2, 2);
 
-CREATE TABLE `categoria` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO ebook_categoria (ebook_id, categoria_id) VALUES
+(1, 1),
+(1, 4),
+(2, 1),
+(2, 4);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `ebook`
---
-
-CREATE TABLE `ebook` (
-  `id` int(11) NOT NULL,
-  `titulo` varchar(50) NOT NULL,
-  `descricao` varchar(255) NOT NULL,
-  `isbn` varchar(255) NOT NULL,
-  `data_publicacao` date NOT NULL,
-  `preco` decimal(8,2) NOT NULL,
-  `idioma` varchar(50) NOT NULL,
-  `foto` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `editora`
---
-
-CREATE TABLE `editora` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(50) NOT NULL,
-  `site` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `usuario`
---
-
-CREATE TABLE `usuario` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(50) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `senha` varchar(255) NOT NULL,
-  `tipo` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `autor`
---
-ALTER TABLE `autor`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `avaliacao`
---
-ALTER TABLE `avaliacao`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `categoria`
---
-ALTER TABLE `categoria`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `ebook`
---
-ALTER TABLE `ebook`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `editora`
---
-ALTER TABLE `editora`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `usuario`
---
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `autor`
---
-ALTER TABLE `autor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `avaliacao`
---
-ALTER TABLE `avaliacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `categoria`
---
-ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `ebook`
---
-ALTER TABLE `ebook`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `editora`
---
-ALTER TABLE `editora`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO avaliacao (nota, comentario, usuario_id, ebook_id) VALUES
+(5, 'Obra prima da literatura brasileira!', 2, 1),
+(4, 'Livro incrível, leitura obrigatória', 2, 2);
