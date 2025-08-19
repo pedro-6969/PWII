@@ -18,7 +18,10 @@
 
         public function buscar($id){}
 
-        public function buscarTodos(){}
+        public function buscarTodos(){
+            $stmt = $pdo->query("SELECT * FROM categoria");
+            $pessoas = $stmt->fetchAll();
+        }
 
         public function atualizar($id){}
 

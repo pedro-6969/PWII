@@ -26,7 +26,10 @@
 
         public function buscar($id){}
 
-        public function buscarTodos(){}
+        public function buscarTodos(){
+            $stmt = $pdo->query("SELECT * FROM avaliacao");
+            $pessoas = $stmt->fetchAll();
+        }
 
         public function atualizar($id){}
 
