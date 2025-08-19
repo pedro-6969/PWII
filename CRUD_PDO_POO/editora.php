@@ -10,18 +10,12 @@
             $this->site = $site;
             $this->email = $email;
         }
-        public function inserir(){
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $nome = $_POST['nome'];
-                $site = $_POST['site'];
-                $email = $_POST['email'];
-            
-                $stmt = $pdo->prepare("INSERT INTO editora (nome, site, email) VALUES (:nome, :site, :email)");
-                $stmt->bindParam(':nome', $nome);
-                $stmt->bindParam(':site', $site);
-                $stmt->bindParam(':email', $email);
-                $stmt->execute();
-            }
+        public function inserir($nome, $site, $email){
+            $stmt = $pdo->prepare("INSERT INTO editora (nome, site, email) VALUES (:nome, :site, :email)");
+            $stmt->bindParam(':nome', $nome);
+            $stmt->bindParam(':site', $site);
+            $stmt->bindParam(':email', $email);
+            $stmt->execute();
         }
 
         public function buscar($id){
@@ -36,6 +30,10 @@
 
         public function atualizar($id){}
 
-        public function deletar($id){}
+        public function deletar($id){
+            $stmt = $pdo->prepare('DELETE FROM editora WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+        }
     }
 ?>

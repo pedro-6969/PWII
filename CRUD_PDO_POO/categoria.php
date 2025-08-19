@@ -6,14 +6,10 @@
         public function __construct($nome){
             $this->nome = $nome;
         }
-        public function inserir(){
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $nome = $_POST['nome'];
-            
-                $stmt = $pdo->prepare("INSERT INTO categoria (nome) VALUES (:nome)");
-                $stmt->bindParam(':nome', $nome);
-                $stmt->execute();
-            }
+        public function inserir($nome){      
+            $stmt = $pdo->prepare("INSERT INTO categoria (nome) VALUES (:nome)");
+            $stmt->bindParam(':nome', $nome);
+            $stmt->execute();
         }
 
         public function buscar($id){
@@ -28,6 +24,10 @@
 
         public function atualizar($id){}
 
-        public function deletar($id){}
+        public function deletar($id){
+            $stmt = $pdo->prepare('DELETE FROM categoria WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+        }
     }
 ?>

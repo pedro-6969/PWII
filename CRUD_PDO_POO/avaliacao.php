@@ -10,18 +10,12 @@
             $this->comentario = $comentario;
             $this->data = $data;
         }
-        public function inserir(){
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $nota = $_POST['nota'];
-                $comentario = $_POST['comentario'];
-                $data = $_POST['data'];
-            
-                $stmt = $pdo->prepare("INSERT INTO avaliacao (nota, comentario, data) VALUES (:nota, :comentario, :data)");
-                $stmt->bindParam(':nota', $nota);
-                $stmt->bindParam(':comentario', $comentario);
-                $stmt->bindParam(':data', $data);
-                $stmt->execute();
-            }
+        public function inserir($nota, $comentario, $data){
+            $stmt = $pdo->prepare("INSERT INTO avaliacao (nota, comentario, data) VALUES (:nota, :comentario, :data)");
+            $stmt->bindParam(':nota', $nota);
+            $stmt->bindParam(':comentario', $comentario);
+            $stmt->bindParam(':data', $data);
+            $stmt->execute();
         }
 
         public function buscar($id){
@@ -36,6 +30,10 @@
 
         public function atualizar($id){}
 
-        public function deletar($id){}
+        public function deletar($id){
+            $stmt = $pdo->prepare('DELETE FROM avaliacao WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+        }
     }
 ?>

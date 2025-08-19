@@ -10,18 +10,12 @@
             $this->biografia = $biografia;
             $this->foto = $foto;
         }
-        public function inserir(){
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $nome = $_POST['nome'];
-                $biografia = $_POST['biografia'];
-                $foto = $_POST['foto'];
-            
-                $stmt = $pdo->prepare("INSERT INTO autor (nome, biografia, foto) VALUES (:nome, :biografia, :foto)");
-                $stmt->bindParam(':nome', $nome);
-                $stmt->bindParam(':biografia', $biografia);
-                $stmt->bindParam(':foto', $foto);
-                $stmt->execute();
-            }
+        public function inserir($nome, $biografia, $foto){
+            $stmt = $pdo->prepare("INSERT INTO autor (nome, biografia, foto) VALUES (:nome, :biografia, :foto)");
+            $stmt->bindParam(':nome', $nome);
+            $stmt->bindParam(':biografia', $biografia);
+            $stmt->bindParam(':foto', $foto);
+            $stmt->execute();
         }
 
         public function buscar($id){
@@ -36,6 +30,10 @@
 
         public function atualizar($id){}
 
-        public function deletar($id){}
+        public function deletar($id){
+            $stmt = $pdo->prepare('DELETE FROM autor WHERE id = :id');
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+        }
     }
 ?>
