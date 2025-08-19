@@ -24,11 +24,14 @@
             }
         }
 
-        public function buscar($id){}
+        public function buscar($id){
+            $stmt = $pdo->query("SELECT * FROM editora");
+            $editoras = $stmt->fetchAll();
+        }
 
         public function buscarTodos(){
             $stmt = $pdo->query("SELECT * FROM editora");
-            $pessoas = $stmt->fetchAll();
+            $editoras = $stmt->fetchAll();
         }
 
         public function atualizar($id){}

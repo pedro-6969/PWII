@@ -40,11 +40,14 @@
             }
         }
 
-        public function buscar($id){}
+        public function buscar($id){
+            $stmt = $pdo->query("SELECT * FROM ebook WHERE id = $id");
+            $ebooks = $stmt->fetchAll();
+        }
 
         public function buscarTodos(){
             $stmt = $pdo->query("SELECT * FROM ebook");
-            $pessoas = $stmt->fetchAll();
+            $ebooks = $stmt->fetchAll();
         }
 
         public function atualizar($id){}

@@ -29,11 +29,14 @@
             }
         }
 
-        public function buscar($id){}
+        public function buscar($id){
+            $stmt = $pdo->query("SELECT * FROM usuario WHERE id = $id");
+            $usuarios = $stmt->fetchAll();
+        }
 
         public function buscarTodos(){
             $stmt = $pdo->query("SELECT * FROM usuario");
-            $pessoas = $stmt->fetchAll();
+            $usuarios = $stmt->fetchAll();
         }
 
         public function atualizar($id){}

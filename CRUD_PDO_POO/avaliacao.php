@@ -24,11 +24,14 @@
             }
         }
 
-        public function buscar($id){}
+        public function buscar($id){
+            $stmt = $pdo->query("SELECT * FROM avaliacao WHERE id = $id");
+            $avaliacoes = $stmt->fetchAll();
+        }
 
         public function buscarTodos(){
             $stmt = $pdo->query("SELECT * FROM avaliacao");
-            $pessoas = $stmt->fetchAll();
+            $avaliacoes = $stmt->fetchAll();
         }
 
         public function atualizar($id){}

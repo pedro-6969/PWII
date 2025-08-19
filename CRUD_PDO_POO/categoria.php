@@ -16,11 +16,14 @@
             }
         }
 
-        public function buscar($id){}
+        public function buscar($id){
+            $stmt = $pdo->query("SELECT * FROM categoria WHERE id = $id");
+            $categorias = $stmt->fetchAll();
+        }
 
         public function buscarTodos(){
             $stmt = $pdo->query("SELECT * FROM categoria");
-            $pessoas = $stmt->fetchAll();
+            $categorias = $stmt->fetchAll();
         }
 
         public function atualizar($id){}
